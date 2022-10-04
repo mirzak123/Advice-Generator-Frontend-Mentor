@@ -69,14 +69,12 @@ body {
     position: absolute;
     bottom: 0;
     transform: translateY(50%);
+    transition: .15s;
 }
 
-.advice__btn-wrapper:hover {
+.advice__btn-wrapper:hover,
+.advice__btn-wrapper:active {
     box-shadow: 0 0 35px hsl(150, 100%, 66%);
-}
-
-.advice__btn {
-    aspect-ratio: 1;
 }
 
 @media screen and (max-width: 400px) {
@@ -92,5 +90,11 @@ body {
 
     .advice-card__divider--mobile {
         display: inline-block;
+    }
+}
+
+@media (hover: none) {
+    .advice__btn-wrapper:hover {
+        box-shadow: none;
     }
 }

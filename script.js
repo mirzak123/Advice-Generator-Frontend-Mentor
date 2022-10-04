@@ -19,3 +19,6 @@ function setAdvice (id, advice) {
 getRandomAdvice(advice_url);
 
 advice_btn.addEventListener('click', () => { getRandomAdvice(advice_url) });
+advice_btn.addEventListener('focusout', () => {
+    advice_btn.style.boxShadow = '';
+});
