@@ -1,0 +1,96 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: hsl(218, 23%, 16%);
+    color: hsl(193, 38%, 86%);
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.advice-card {
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em 2.5em 4em;
+    
+    /* for dice button */
+    position: relative;
+    /* border: 3px solid white; */
+}
+
+.advice-header {
+    font-size: .9rem;
+    color: hsl(150, 100%, 66%);
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: .5em 0;
+    text-align: center;
+}
+
+.advice-num {
+    padding-inline-start: .5em;
+}
+
+.advice-text {
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.advice-card__divider {
+    margin: 1em 0;
+}
+
+.advice-card__divider--mobile {
+    display: none;
+}
+
+.advice__btn-wrapper {
+    background: hsl(150, 100%, 66%);
+    border-radius: 100px;
+    padding: 1em 1em .7em;
+
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+.advice__btn-wrapper:hover {
+    box-shadow: 0 0 35px hsl(150, 100%, 66%);
+}
+
+.advice__btn {
+    aspect-ratio: 1;
+}
+
+@media screen and (max-width: 400px) {
+    .advice-card {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2em 1em 4em;
+    }
+    
+    .advice-card__divider--desktop {
+        display: none;
+    }
+
+    .advice-card__divider--mobile {
+        display: inline-block;
+    }
+}
